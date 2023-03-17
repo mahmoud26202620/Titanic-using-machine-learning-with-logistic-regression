@@ -804,7 +804,7 @@ ggplot(Predict(fit4, age , sex , pclass, sibsp=0 , fun=plogis))
 
 ![fit4](https://user-images.githubusercontent.com/41892582/225168149-015079c7-bef4-4bb0-8b03-6cfb62318b6d.jpg)
 
-sibsp are two
+sibsp are one
 
 ~~~
 ggplot(Predict(fit4, age , sex , pclass, sibsp=0 , fun=plogis))
@@ -816,7 +816,7 @@ It's time to predict the survived of the remaining 20%.
 
 ~~~
 test<-predict(fit4,titanic.test.complete)   ##apply the model to the test data
-test<-ifelse(test4>0.5,1,0)                 ##convert the probability value to survive or not.
+test<-ifelse(test>0.5,1,0)                 ##convert the probability value to survive or not.
 confusionMatrix(table(test4,actual))        ##compare the model's output to the actual data
 ~~~
 
