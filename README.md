@@ -19,6 +19,7 @@ library(tidyverse)
 library(Hmisc)
 library(rms)
 library(mice)
+library(caret)
 ~~~
 
 **Getting the data**
